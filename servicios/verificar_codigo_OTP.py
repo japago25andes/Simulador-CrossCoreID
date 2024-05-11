@@ -1,5 +1,6 @@
 from flask import jsonify, request
 
+
 def otp_verify():
     data = request.get_json()
 
@@ -18,13 +19,26 @@ def otp_verify():
     if not all(field in data['xmlVerificarCodigoOTP']['VerificarCodigoOTPSolicitud'] for field in required_fields):
         return jsonify({'error': 'Faltan campos requeridos en VerificarCodigoOTPSolicitud'}), 400
 
+    if data['xmlVerificarCodigoOTP']['VerificarCodigoOTPSolicitud']['DatosCodigoOTP']['codigoOTP'] == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92":
+        response = {
+            "VerificarCodigoOTPRespuesta": {
+                "resultadoValidacion": "1",
+                "codParametrizacion": "2740",
+                "mensajeValidacion": "Validación del código OTP exitoso.",
+                "codigoValido": "true",
+                "idTransaccionOTP": "ff5f7f18-2bab-4d4e-9015-6cb58e47a0ed"
+            }
+        }
+        return jsonify(response)
+
+
     # Si todo está bien, devolver la respuesta predefinida
     response = {
         "VerificarCodigoOTPRespuesta": {
             "resultadoValidacion": "1",
             "codParametrizacion": "2740",
             "mensajeValidacion": "Validación del código OTP exitoso.",
-            "codigoValido": "true",
+            "codigoValido": "false",
             "idTransaccionOTP": "ff5f7f18-2bab-4d4e-9015-6cb58e47a0ed"
         }
     }
