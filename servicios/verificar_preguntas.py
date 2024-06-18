@@ -16,7 +16,7 @@ def verificar_preguntas():
     # Si todo está bien, devolver la respuesta predefinida
     response = {
         "resultado": "true",
-        "aprobacion": "false",
+        "aprobacion": "true",
         "preguntasCompletas": "true",
         "score": "000",
         "codigoSeguridad": "OXQ6HG6",

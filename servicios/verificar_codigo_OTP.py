@@ -37,7 +37,7 @@ def otp_verify():
         "VerificarCodigoOTPRespuesta": {
             "resultadoValidacion": "1",
             "codParametrizacion": "2740",
-            "mensajeValidacion": "Validación del código OTP exitoso.",
+            "mensajeValidacion": "Validación del código OTP no exitoso.",
             "codigoValido": "false",
             "idTransaccionOTP": "ff5f7f18-2bab-4d4e-9015-6cb58e47a0ed"
         }

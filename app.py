@@ -14,6 +14,10 @@ app = Flask(__name__)
 def hola():
     return 'Hola, mundo!'
 
+
+
+
+
 #1
 app.route('/op/evidentemaster/v1/identificacion/validar', methods=['POST'])(validar_identificacion)
 #2

@@ -20,7 +20,7 @@ def validar_identificacion():
 
     # Si todo está bien, devolver la respuesta predefinida
 
-    if(data['datosValidacion']['identificacion']['numero'] == "1031"):
+    if(data['datosValidacion']['identificacion']['numero'] == "79974476"):
 
         response = {
             "valApellido": "true",
@@ -28,19 +28,19 @@ def validar_identificacion():
             "valFechaExp": "true",
             "excluirCliente": "false",
             "alertas": "false",
-            "respuestaAlerta": "04",
+            "respuestaAlerta": "03",
             "codigoAlerta": "00",
             "resultado": "01",
-            "regValidacion": "5834433",
+            "regValidacion": "8319717",
             "resultadoProceso": "true",
             "consultasDisponibles": "1",
             "Identificacion": {
-                "numero": data['datosValidacion']['identificacion']['numero'],
+                "numero": "00079974476",
                 "tipo": "1"
             },
-            "Nombre": "URANGO HOYOS ANA DOLORES",
+            "Nombre": "GUATAVA CASTIBLANCO MIGUEL FAIR",
             "FechaExpedicion": {
-                "timestamp": "714697200000"
+                "timestamp": "885945600000"
             }
         }
 
